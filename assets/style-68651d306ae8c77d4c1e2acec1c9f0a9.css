@@ -1,0 +1,174 @@
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+
+  height: 100vh;
+  width: 100vw;
+
+  --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+  --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+  --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+  --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+  --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+  --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+  --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fffdfa;
+}
+
+main {
+  max-width: 40em;
+  width: calc(100% - 2em);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1em;
+  font-size: var(--fs-base);
+}
+
+a {
+  text-decoration-color: #000a;
+  color: #0009;
+}
+
+a:hover {
+  text-decoration-color: #000;
+  color: #000;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+#subject-selection {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+input {
+  flex: 1;
+  line-height: 1;
+  background-color: #fffdfa;
+  border: 1px solid #000a;
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: var(--fs-lg);
+  margin: 0.4em 0 0.4em 0;
+  padding-bottom: 0.1em;
+  border-bottom: 2px solid grey;
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--fs-md);
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+h1::before,
+h2::before {
+  /* content: "𐡷"; */
+  padding-right: 0.2em;
+  font-weight: normal;
+}
+
+h1::after,
+h2::after {
+  /* content: "𐡸"; */
+  padding-left: 0.2em;
+  font-weight: normal;
+}
+
+#limerick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  visibility: hidden;
+  max-width: 40em;
+  flex: 1;
+}
+
+.paper {
+  background-blend-mode: luminosity;
+  background-color: floralwhite;
+  background-image: url(card.webp);
+  box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: min(100%, 25em);
+  gap: 1em;
+}
+
+#limerick-text {
+  display: flex;
+  font-size: var(--fs-base);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3em;
+  text-align-last: right;
+  text-wrap: pretty;
+}
+
+#back-forward {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  visibility: hidden;
+}
+
+a#previous,
+a#next {
+  position: relative;
+  font-size: var(--fs-md);
+  padding: 0.2em;
+}
+
+a#previous::before {
+  content: "⏴";
+  font-family: "Noto Sans Symbols 2";
+  top: 0.4em;
+  display: inline-block;
+  padding-right: 0.2em;
+  text-decoration: none;
+}
+
+a#next::after {
+  content: "⏵";
+  font-family: "Noto Sans Symbols 2";
+  right: 0;
+  display: inline-block;
+  top: 0.4em;
+  padding-left: 0.2em;
+  text-decoration: none;
+}
+
+#about {
+  display: flex;
+  font-size: var(--fs-sm);
+  flex-direction: column;
+  align-self: center;
+  justify-content: flex-start;
+  max-width: max(calc(100% - 4em), 35em);
+  gap: 1em;
+  padding-bottom: 1.5em;
+  flex: 1;
+}
