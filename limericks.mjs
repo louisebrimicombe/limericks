@@ -144,8 +144,8 @@ export default [
     ],
   },
   {
-    id: "eladgyth",
-    name: "Eladgyth",
+    id: "ealdgyth",
+    name: "Ealdgyth",
     episode: "S3.13",
     text: [
       "Imprisoned, in times of great strife,",
